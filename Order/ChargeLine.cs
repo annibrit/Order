@@ -12,4 +12,8 @@ namespace Order
         public String description;
         public string Comment;
     }
+
+    //addTax
+    //getTaxes
+    //removeTax
 }

@@ -5,12 +5,13 @@ namespace Order
     public class TaxOnLine
     {
 
-        private string type;
+        private string taxationtype;
         private string comment;
+        //taxationRate:Real
 
         public double Rate { get; set; }
 
-        public string Type
+        public string taxationType
         {
 
             get { return Str.EmptyIfNull(type); }

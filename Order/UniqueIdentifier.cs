@@ -8,5 +8,6 @@ namespace Order
 {
     public class UniqueIdentifier 
     {
+        //public String UniqueIdentifier??
     }
 }
