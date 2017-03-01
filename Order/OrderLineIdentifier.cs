@@ -1,7 +1,7 @@
 ﻿
 namespace Order
 {
-    public class OrderLineIdentifier
+    public class OrderLineIdentifier : UniqueIdentifier
     {
         public int OrderLineId { get; set; }
 
