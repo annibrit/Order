@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Order
 {
-    class ChargeLine
+    public class ChargeLine
     {
+        public Double amount;
+        public String description;
+        public string Comment;
     }
 }
