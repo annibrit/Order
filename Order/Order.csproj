@@ -42,12 +42,17 @@
   <ItemGroup>
     <Compile Include="Aids\Rnd.cs" />
     <Compile Include="Aids\Str.cs" />
+    <Compile Include="ChargeLine.cs" />
     <Compile Include="Discount.cs" />
+    <Compile Include="OrderEvent.cs" />
+    <Compile Include="OrderIdentifier.cs" />
+    <Compile Include="OrderLine.cs" />
     <Compile Include="OrderLineIdentifier.cs" />
     <Compile Include="OrderStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesTaxPolicy.cs" />
     <Compile Include="TaxOnLine.cs" />
+    <Compile Include="UniqueIdentifier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
