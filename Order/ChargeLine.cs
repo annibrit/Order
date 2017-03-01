@@ -10,7 +10,7 @@ namespace Order
     {
         public Double amount;
         public String description;
-        public string Comment;
+        public String Comment;
     }
 
     //addTax
