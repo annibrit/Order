@@ -14,7 +14,6 @@ namespace Order
             set { taxtype = value; }
         }
 
-
         public double Rate
         {
             get;
