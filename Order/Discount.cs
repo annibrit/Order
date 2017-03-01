@@ -8,7 +8,6 @@ namespace Order
 
         public string Reason
         {
-
             get { return Str.EmptyIfNull(reason); }
             set { reason = value; }
         }
