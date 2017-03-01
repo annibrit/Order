@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Order
 {
-    class OrderIdentifier
+    public class OrderIdentifier : UniqueIdentifier
     {
         public string Identifier;
     }
