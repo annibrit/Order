@@ -18,7 +18,7 @@ namespace Tests
         [TestMethod]
         public void OrderLineIdTest()
         {
-            IntPropertyTest(() => N.OrderLineId, x => N.OrderLineId = x);
+            //IntPropertyTest(() => N.OrderLineId, x => N.OrderLineId = x);
         }
     }
 }

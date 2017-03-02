@@ -9,10 +9,9 @@ namespace Order
     public class OrderLine
     {
         public string ProductType { get; set; }
-    
-
-        public int serialNumber;
-        public int numberOrdered;
+        public int SerialNumber { get; set; }
+        public int NumberOrdered { get; set; }
+        public int UnitPrice { get; set; }
 
         //getOrderLineIdentifier() - Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
         //incrementNumberOrdered - Increments the number of ProductInstance recorded by the OrderLine
