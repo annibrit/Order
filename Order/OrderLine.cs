@@ -1,14 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Order.Aids;
 
 namespace Order
 {
     public class OrderLine
     {
-        public string ProductType { get; set; }
+        private string producttype;
+        private int serialnumber;
+        private int numberordered;
+        private int unitprice;
+
+        public string ProductType
+        {
+            get { return Str.EmptyIfNull(producttype); }
+            set { producttype = value; }
+        }
         public int SerialNumber { get; set; }
         public int NumberOrdered { get; set; }
         public int UnitPrice { get; set; }
