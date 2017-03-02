@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Order.Discount" Collapsed="true">
-    <Position X="4.5" Y="2" Width="1.5" />
+    <Position X="5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Discount.cs</FileName>
@@ -15,23 +15,30 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Order.OrderStatus" Collapsed="true">
-    <Position X="2.75" Y="1" Width="1.5" />
+    <Position X="5" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Order.OrderStatus.Status" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OrderStatus.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OrderStatus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Order.SalesTaxPolicy" Collapsed="true">
-    <Position X="4.75" Y="1" Width="1.5" />
+    <Position X="5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>SalesTaxPolicy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Order.TaxOnLine" Collapsed="true">
-    <Position X="5.5" Y="4.5" Width="1.5" />
+    <Position X="5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QBQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAQAAAAEAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAA=</HashCode>
       <FileName>TaxOnLine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -50,21 +57,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Order.OrderLine">
-    <Position X="2.75" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgQAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>IAAAAAgQAAAAAAAAAAABAAAAAAEAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>OrderLine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Order.ProductIdentifier" Collapsed="true">
-    <Position X="2.5" Y="6" Width="1.5" />
+    <Position X="5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProductIdentifier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Order.ChargeLine">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="2.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>ChargeLine.cs</FileName>
