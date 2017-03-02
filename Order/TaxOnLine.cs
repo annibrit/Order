@@ -14,8 +14,8 @@ namespace Order
         public string taxationType
         {
 
-            get { return Str.EmptyIfNull(type); }
-            set { type = value; }
+            get { return Str.EmptyIfNull(taxationtype); }
+            set { taxationtype = value; }
         }
 
         public string Comment

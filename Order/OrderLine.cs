@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Order
 {
-    class OrderLine
+    public class OrderLine
     {
-        public String productType;
+        public string ProductType { get; set; }
+    
+
         public int serialNumber;
         public int numberOrdered;
 
@@ -22,10 +24,24 @@ namespace Order
         //addTax(...) Adds tax (represented by a TaxOnLine) to the OrderLine
         //getTaxes() - Returns all the TaxOnLines for this OrderLine
         //removeTax(...) Removes a TaxOnLine from the OrderLine
-        //addChargeLine(...) Adds a ChargeLine to the OrderLine
-        //getChargeLines() Returns all the ChargeLines associated with this OrderLine
+        public void addChargeLine(ChargeLine line)
+        {
+            ChargeLines.Instances.Add(line);
+        }
+
+        public ChargeLines getChargeLines()
+        {
+            //todo return ChargeLines.Instances.Select(x=>x.)
+            return ChargeLines.Instances;
+        } //Returns all the ChargeLines associated with this OrderLine
         //removeChargeLine(...) Removes a ChargeLine from the OrderLine
         //clone() Makes a copy of the OrderLine and any associated objects that can be used to create an amended OrderLine
-
+
+
+
+
+
+
+
     }
 }

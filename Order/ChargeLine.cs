@@ -8,8 +8,8 @@ namespace Order
 {
     public class ChargeLine
     {
-        public Double amount;
-        public String description;
+        public double amount;
+        public string description;
         public string Comment;
     }
 
