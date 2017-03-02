@@ -46,6 +46,8 @@
     <Compile Include="Archetype\Archetypes.cs" />
     <Compile Include="ChargeLine.cs" />
     <Compile Include="ChargeLines.cs" />
+    <Compile Include="DeliveryReceiver.cs" />
+    <Compile Include="DeliveryReceivers.cs" />
     <Compile Include="Discount.cs" />
     <Compile Include="OrderEvent.cs" />
     <Compile Include="OrderIdentifier.cs" />
