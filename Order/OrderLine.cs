@@ -13,40 +13,64 @@ namespace Order
         public int NumberOrdered { get; set; }
         public int UnitPrice { get; set; }
 
-        //getOrderLineIdentifier() - Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
+        public void getOrderLineIdentifier()
+        {
+            //return OrderLineIdentifier();
+        } //Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
+
         //incrementNumberOrdered - Increments the number of ProductInstance recorded by the OrderLine
         //getNumberOrdered() - Returns the number of ProductInstances recorded by the OrderLine
         //decrementNumberOrdered - Decrements the number of ProductInstances recorded by the OrderLine
-        public void addDeliveryReceiver(DeliveryReceiver line)
+        public void AddDeliveryReceiver(DeliveryReceiver reciever)
         {
-            
+            DeliveryReceivers.Instances.Add(reciever);
         }
-        //addDeliveryReceiver - Adds a DeliveryReceiver to the OrderLine
-        //getDeliveryReceiver() - Returns the DeliveryReceiver for this OrderLine
-        //removeDeliveryReceiver - Removes the DeliveryReceiver from the OrderLine
-        //addTax(...) Adds tax (represented by a TaxOnLine) to the OrderLine
-        //getTaxes() - Returns all the TaxOnLines for this OrderLine
-        //removeTax(...) Removes a TaxOnLine from the OrderLine
-        public void addChargeLine(ChargeLine line)
+
+        public DeliveryReceivers GetDeliveryReceiver()
+        {
+            //todo return DeliveryReceivers.Instances.Select(x=>x.)
+            return DeliveryReceivers.Instances;
+        } //Returns the DeliveryReceiver for this OrderLine
+
+        public void RemoveDeliveryReceiver()
+        {
+            // DeliveryReceivers.Instances.Remove(?);
+        } //Removes the DeliveryReceiver from the OrderLine
+
+        public void AddTax(TaxOnLine tax)
+        {
+            TaxOnLines.Instances.Add(tax);
+        }
+
+        public TaxOnLines GetTaxes()
+        {
+            //todo return TaxOnLines.Instances.Select(x=>x.)
+            return TaxOnLines.Instances;
+        } //Returns all the TaxOnLines for this OrderLine
+
+        public void RemoveTax()
+        {
+            // TaxOnLines.Instances.Remove(?);
+        } //Removes a TaxOnLine from the OrderLine
+        public void AddChargeLine(ChargeLine line)
         {
             ChargeLines.Instances.Add(line);
         }
 
-        public ChargeLines getChargeLines()
+        public ChargeLines GetChargeLines()
         {
             //todo return ChargeLines.Instances.Select(x=>x.)
             return ChargeLines.Instances;
         } //Returns all the ChargeLines associated with this OrderLine
 
-        
-        //removeChargeLine(...) Removes a ChargeLine from the OrderLine
-        //clone() Makes a copy of the OrderLine and any associated objects that can be used to create an amended OrderLine
+        public void RemoveChargeLine()
+        {
+            // ChargeLines.Instances.Remove(?);
+        } //Removes a ChargeLine from the OrderLine
 
-
-
-
-
-
-
+        public OrderLine Clone()
+        {
+            return new OrderLine();
+        } //Makes a copy of the OrderLine and any associated objects that can be used to create an amended OrderLine
     }
 }
