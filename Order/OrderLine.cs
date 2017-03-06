@@ -12,15 +12,40 @@ namespace Order
         public int SerialNumber { get; set; }
         public int NumberOrdered { get; set; }
         public int UnitPrice { get; set; }
+        public int ProductInstance { get; set; }
 
-        public void getOrderLineIdentifier()
-        {
-            //return OrderLineIdentifier();
-        } //Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
+             public void getOrderLineIdentifier()
+             {
+                 //return OrderLineIdentifier();
+             } //Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
+        /*
+         * 
+         * Stackist:
+                 * public class MyClass
+            {
+        public  static int countinstance  =0;
+        MyClass(){ countinstance  ++;}
+         ~ MyClass() {countinstance  --; }
+            }
 
-        //incrementNumberOrdered - Increments the number of ProductInstance recorded by the OrderLine
-        //getNumberOrdered() - Returns the number of ProductInstances recorded by the OrderLine
-        //decrementNumberOrdered - Decrements the number of ProductInstances recorded by the OrderLine
+
+             public void getNumberOrdered() {
+             return ProductInstances
+             }
+            - Returns the number of ProductInstances recorded by the OrderLine
+
+             public void incrementNumberOrdered() {
+             ProductInstances++
+                }
+             Increments the number of ProductInstance recorded by the OrderLine
+
+             public void decrementNumberOrdered() {
+             ProductInstances--
+                }   
+             
+             Decrements the number of ProductInstances recorded by the OrderLine
+
+         */
         public void AddDeliveryReceiver(DeliveryReceiver reciever)
         {
             DeliveryReceivers.Instances.Add(reciever);
@@ -30,12 +55,14 @@ namespace Order
         {
             //todo return DeliveryReceivers.Instances.Select(x=>x.)
             return DeliveryReceivers.Instances;
-        } //Returns the DeliveryReceiver for this OrderLine
+        } //Returns the DeliveryReceiver for this OrderLine
+
 
         public void RemoveDeliveryReceiver()
         {
             // DeliveryReceivers.Instances.Remove(?);
-        } //Removes the DeliveryReceiver from the OrderLine
+        } //Removes the DeliveryReceiver from the OrderLine
+
 
         public void AddTax(TaxOnLine tax)
         {
@@ -50,7 +77,7 @@ namespace Order
 
         public void RemoveTax()
         {
-            // TaxOnLines.Instances.Remove(?);
+          // TaxOnLines.Instances.Remove(?);
         } //Removes a TaxOnLine from the OrderLine
         public void AddChargeLine(ChargeLine line)
         {
