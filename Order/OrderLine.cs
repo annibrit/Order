@@ -30,12 +30,14 @@ namespace Order
         {
             //todo return DeliveryReceivers.Instances.Select(x=>x.)
             return DeliveryReceivers.Instances;
-        } //Returns the DeliveryReceiver for this OrderLine
+        } //Returns the DeliveryReceiver for this OrderLine
+
 
         public void RemoveDeliveryReceiver()
         {
             // DeliveryReceivers.Instances.Remove(?);
-        } //Removes the DeliveryReceiver from the OrderLine
+        } //Removes the DeliveryReceiver from the OrderLine
+
 
         public void AddTax(TaxOnLine tax)
         {
