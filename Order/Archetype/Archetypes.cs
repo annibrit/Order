@@ -9,9 +9,11 @@ namespace Order.Archetype
 {
     public class Archetypes<T> : Archetype, IList<T>
     {
+        private readonly IList<T> _list = new List<T>();
+
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return _list.GetEnumerator();
             //public static Units {get; } = new units
         }
 
@@ -22,50 +24,59 @@ namespace Order.Archetype
 
         public void Add(T item)
         {
-            throw new NotImplementedException();
+            _list.Add(item);
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _list.Clear();
         }
 
         public bool Contains(T item)
         {
-            throw new NotImplementedException();
+            return _list.Contains(item);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            _list.CopyTo(array, arrayIndex);
         }
 
         public bool Remove(T item)
         {
-            throw new NotImplementedException();
+            return _list.Remove(item);
         }
 
-        public int Count { get; }
-        public bool IsReadOnly { get; }
+        public int Count
+        {
+            get { return _list.Count; }
+        }
+
+        public bool IsReadOnly
+        {
+            get { return _list.IsReadOnly; }
+        }
+
         public int IndexOf(T item)
         {
-            throw new NotImplementedException();
+            return _list.IndexOf(item);
         }
 
         public void Insert(int index, T item)
         {
-            throw new NotImplementedException();
+            _list.Insert(index, item);
         }
 
         public void RemoveAt(int index)
         {
-            throw new NotImplementedException();
+            _list.RemoveAt(index);
         }
 
         public T this[int index]
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _list[index]; }
+            set { _list[index] = value; }
         }
+
     }
 }
