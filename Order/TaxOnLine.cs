@@ -8,12 +8,12 @@ namespace Order
         private string type;
         private string comment;
         //taxationRate:Real
+        public TaxOnLine tax { get; set; }
 
         public double Rate { get; set; }
 
         public string Type
         {
-
             get { return Str.EmptyIfNull(type); }
             set { type = value; }
         }

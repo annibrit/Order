@@ -11,6 +11,7 @@ namespace Order
         public double amount;
         public string description;
         public string Comment;
+        public OrderLineIdentifier id { get; set; }
     }
 
     //addTax

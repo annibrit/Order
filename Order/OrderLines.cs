@@ -5,7 +5,7 @@ namespace Order
 {
     public class OrderLines : Archetypes<OrderLine>
     {
-        public static OrderLines Instances
+        public static OrderLines Instance
         { get; } = new OrderLines();
     }
 }
