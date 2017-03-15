@@ -55,6 +55,7 @@
     <Compile Include="CommonTests.cs" />
     <Compile Include="DiscountTests.cs" />
     <Compile Include="OrderLineIdentifierTests.cs" />
+    <Compile Include="OrderLineTests.cs" />
     <Compile Include="OrderStatusTests.cs" />
     <Compile Include="SalesTaxPolicyTests.cs" />
     <Compile Include="TaxOnLineTests.cs" />

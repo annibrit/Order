@@ -1,98 +1,80 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Order.Aids;
 
 namespace Order
 {
     public class OrderLine
     {
-        public string ProductType { get; set; }
+        private string producttype;
+        private int serialnumber;
+        private int numberordered;
+        private int unitprice;
+
+        public string ProductType
+        {
+            get { return Str.EmptyIfNull(producttype); }
+            set { producttype = value; }
+        }
         public int SerialNumber { get; set; }
         public int NumberOrdered { get; set; }
         public int UnitPrice { get; set; }
-        public int ProductInstance { get; set; }
 
-             public void getOrderLineIdentifier()
-             {
-                 //return OrderLineIdentifier();
-             } //Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
-        /*
-         * 
-         * Stackist:
-                 * public class MyClass
-            {
-        public  static int countinstance  =0;
-        MyClass(){ countinstance  ++;}
-         ~ MyClass() {countinstance  --; }
-            }
+        public void GetOrderLineIdentifier()
+        {
+            //return OrderLineIdentifier();
+        } //Returns the OrderLineIdentifier—this is the unique identifier for the OrderLine
 
+        //incrementNumberOrdered - Increments the number of ProductInstance recorded by the OrderLine
+        //getNumberOrdered() - Returns the number of ProductInstances recorded by the OrderLine
+        //decrementNumberOrdered - Decrements the number of ProductInstances recorded by the OrderLine
 
-             public void getNumberOrdered() {
-             return ProductInstances
-             }
-            - Returns the number of ProductInstances recorded by the OrderLine
-
-             public void incrementNumberOrdered() {
-             ProductInstances++
-                }
-             Increments the number of ProductInstance recorded by the OrderLine
-
-             public void decrementNumberOrdered() {
-             ProductInstances--
-                }   
-             
-             Decrements the number of ProductInstances recorded by the OrderLine
-
-         */
         public void AddDeliveryReceiver(DeliveryReceiver reciever)
         {
-            DeliveryReceivers.Instances.Add(reciever);
+            DeliveryReceivers.Instance.Add(reciever);
         }
 
         public DeliveryReceivers GetDeliveryReceiver()
         {
             //todo return DeliveryReceivers.Instances.Select(x=>x.)
-            return DeliveryReceivers.Instances;
+            return DeliveryReceivers.Instance;
         } //Returns the DeliveryReceiver for this OrderLine
 
 
-        public void RemoveDeliveryReceiver()
+        public void RemoveDeliveryReceiver(DeliveryReceiver receiver)
         {
-            // DeliveryReceivers.Instances.Remove(?);
+            DeliveryReceivers.RemoveByOrderLineReceiver(receiver);
         } //Removes the DeliveryReceiver from the OrderLine
 
 
         public void AddTax(TaxOnLine tax)
         {
-            TaxOnLines.Instances.Add(tax);
+            TaxOnLines.Instance.Add(tax);
         }
 
-        public TaxOnLines GetTaxes()
-        {
-            //todo return TaxOnLines.Instances.Select(x=>x.)
-            return TaxOnLines.Instances;
-        } //Returns all the TaxOnLines for this OrderLine
+        //public TaxOnLines GetTaxes()
+        //{
+        //    //todo return TaxOnLines.Instances.Select(x=>x.)
+        //    return TaxOnLines.Instances;
+        //} //Returns all the TaxOnLines for this OrderLine
 
-        public void RemoveTax()
+        public void RemoveTax(TaxOnLine tax)
         {
-          // TaxOnLines.Instances.Remove(?);
+            TaxOnLines.RemoveByOrderLineTax(tax);
         } //Removes a TaxOnLine from the OrderLine
+
         public void AddChargeLine(ChargeLine line)
         {
-            ChargeLines.Instances.Add(line);
+            ChargeLines.Instance.Add(line);
         }
 
-        public ChargeLines GetChargeLines()
-        {
-            //todo return ChargeLines.Instances.Select(x=>x.)
-            return ChargeLines.Instances;
-        } //Returns all the ChargeLines associated with this OrderLine
+        //public ChargeLines GetChargeLines()
+        //{
+        //    //todo return ChargeLines.Instances.Select(x=>x.)
+        //    return ChargeLines.Instances;
+        //} //Returns all the ChargeLines associated with this OrderLine
 
-        public void RemoveChargeLine()
+        public void RemoveChargeLine(OrderLineIdentifier id)
         {
-            // ChargeLines.Instances.Remove(?);
+            ChargeLines.RemoveByOrderLineId(id);
         } //Removes a ChargeLine from the OrderLine
 
         public OrderLine Clone()

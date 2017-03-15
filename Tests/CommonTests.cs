@@ -31,5 +31,13 @@ namespace Tests
             set(s);
             Assert.AreEqual(s, get());
         }
+
+        protected void IntPropertyTest(Func<int> get, Action<int> set)
+        {
+            Assert.AreEqual(0, get());
+            var d = Rnd.Integer();
+            set(d);
+            Assert.AreEqual(d, get());
+        }
     }
 }

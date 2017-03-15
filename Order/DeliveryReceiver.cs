@@ -8,5 +8,6 @@ namespace Order
 {
     public class DeliveryReceiver
     {
+        public DeliveryReceiver receiver { get; set; }
     }
 }
